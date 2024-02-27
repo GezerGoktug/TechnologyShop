@@ -1,0 +1,84 @@
+dashinput {
+  position: relative;
+  margin-bottom: 15px;
+  input {
+    background-color: transparent;
+    width: 100%;
+    line-height: 40px;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #222;
+    border: 2px solid #ccc;
+    border-radius: 0px;
+    &:focus {
+      outline: 0;
+      border-color: rgb(44, 44, 46);
+    }
+  }
+  label::before {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 15px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #777;
+    transition: 300ms all;
+  }
+  input:valid + label::before {
+    line-height: 20px;
+    font-size: 12px;
+    top: -10px;
+    background: aliceblue;
+    padding: 0 6px;
+    left: 9px;
+    content: attr(data-title);
+  }
+  input:focus + label::before {
+    line-height: 20px;
+    font-size: 12px;
+    top: -10px;
+    background: aliceblue;
+    color: rgb(61, 61, 69);
+    padding: 0 6px;
+    left: 9px;
+  }
+}
+logininput {
+  width: 100%;
+  padding: 8px;
+  outline: none;
+  border: 2px rgba(128, 128, 128, 0.5) solid;
+  border-radius: 15px;
+  font-size: 18px;
+  transition: all 0.2s ease-in;
+  &::placeholder {
+    font-style: italic;
+  }
+  &:focus {
+    border: 2px $primaryColor solid;
+  }
+  &[type="submit"] {
+    width: max-content;
+    padding: 10px 50px;
+    background-color: $primaryColor;
+    color: #fffafa;
+    transition: all 0.2s ease-in;
+    &:hover {
+      cursor: pointer;
+      background-color: #000000;
+    }
+  }
+}
+searchinput {
+  border-bottom: 2px groove gray;
+  width: max-content;
+  margin: 20px 0;
+  #search-product {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 8px 8px 2px 8px;
+    font-size: 18px;
+  }
+}

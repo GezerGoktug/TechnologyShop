@@ -1,0 +1,26 @@
+.cookies {
+  z-index: 130;
+  color: #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 30%;
+  padding: 20px;
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  background-color: rgba(128, 128, 128, 0.701);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  .cookies-submit {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    button {
+      padding: 5px 15px;
+      border: none;
+      color: #ddd;
+      background-color: green;
+    }
+  }
+}

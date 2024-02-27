@@ -1,0 +1,126 @@
+.mycart {
+  width: 100%;
+  display: none;
+  h2 {
+    font-size: 30px;
+  }
+  .remove-list {
+    display: inline-block;
+    margin: 20px 0;
+    font-weight: 600;
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 24px;
+    transition: all 0.3s ease-in;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1, 1.1);
+    }
+  }
+  .cart {
+    display: flex;
+    justify-content: space-between;
+    .products {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+}
+
+//! PRODUCTS CASH SECTİON START
+.products-cash {
+  width: 35%;
+  height: max-content;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  &.mobile {
+    max-height: 100%;
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+  }
+  h3 {
+    color: $primaryColor;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  .basket-total,
+  .cargo-total,
+  .price-total {
+    display: flex;
+    justify-content: space-between;
+    h4 {
+      color: #555;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    span {
+      font-size: 1.1em;
+      color: $primaryColor;
+      display: block;
+    }
+  }
+  .price-total {
+    border-top: 2px groove gray;
+    padding-top: 8px;
+    font-size: large;
+    font-weight: 600;
+  }
+  .fast-cargo {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    input {
+      transform: scale(1.3, 1.3);
+    }
+  }
+
+  button {
+    background-color: $primaryColor;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease-in;
+    &:hover {
+      background-color: #555;
+    }
+    &:last-of-type {
+      margin-top: 10px;
+    }
+  }
+  form {
+    margin-top: 20px;
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #28a745;
+      transition: all 0.3s ease-in;
+      &:hover {
+        background-color: #218838;
+      }
+    }
+  }
+}
+
+//! PRODUCTS CASH SECTİON STOP

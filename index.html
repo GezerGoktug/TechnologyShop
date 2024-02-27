@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--! Meta tags for  Mobile compatibility and SEO(Search Engine Optimization) -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Teknology Shop, en yeni teknoloji ürünlerini en uygun fiyatlarla sunar. Akıllı telefonlar, dizüstü bilgisayarlar, tabletler, aksesuarlar ve daha fazlası için hemen alışverişe başlayın.">
+    <meta name="keywords" content="teknoloji, teknoloji mağazası, teknoloji ürünleri, akıllı telefonlar, dizüstü bilgisayarlar, tabletler, aksesuarlar, teknoloji alışverişi">
+    <title>Technology Shop</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+    <!--! Font Awesome İcon CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <!--! Animation CSS Library CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <!--! LOADİNG İCON START  -->
+    <div class="loading-icon">
+      <i class="fa-solid fa-spinner"></i>
+    </div>
+    <!--! LOADİNG İCON STOP  -->
+    <!--! LOADİNG BAR START  -->
+    <div class="loading-bar "></div>
+    <!--! LOADİNG BAR STOP  -->
+    <div class="wrapper">
+    <!--!  SCREEN LEFT  SOCİAL MEDİA İCONS START  -->
+    <div id="social-icons">
+      <a href="#" style="background-color: navy" class="social-icon"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
+      <a
+        href="#"
+        style="background-color: rgb(30, 159, 182)"
+        class="social-icon"
+        ><i class="fa-brands fa-twitter"></i
+      ></a>
+      <a href="#" style="background-color: rgb(155, 24, 24)" class="social-icon"
+        ><i class="fa-brands fa-youtube"></i
+      ></a>
+      <a
+        href="#"
+        style="
+          background: #833ab4;
+          background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+        "
+        class="social-icon"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+    </div>
+    <!--!  SCREEN LEFT  SOCİAL MEDİA İCONS STOP  -->
+    <!--!  SCREEN RİGHT   HELP-ASİSTAN SECTİON  START  -->
+    <div id="help-asistan" class="icon-container">
+      <i
+        class="fas fa-comment icon animate__animated animate__fadeIn"
+        title="Mesaj"
+      ></i>
+      <i
+        class="fas fa-envelope icon animate__animated animate__fadeIn"
+        title="Mail"
+      ></i>
+      <i
+        class="fas fa-phone icon animate__animated animate__fadeIn"
+        title="Telefon"
+      ></i>
+      <i class="fas fa-user icon" title="Asistan">
+        <span class="asistan-badge">1</span></i
+      >
+    </div>
+    <!--!  SCREEN RİGHT   HELP-ASİSTAN SECTİON  STOP  -->
+    <!--! PRODUCT-CASH  SİDE-BAR START  -->
+    <span id="side-bar" class="side-bar-button">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span class="badge">0</span>
+    </span>
+    <aside>
+      <div class="side-bar animate__animated animate__fadeIn">
+        <div class="side-bar-wrapper">
+          <div class="side-bar-content">
+            <div class="products-cash mobile">
+              <h3>Order Summary</h3>
+              <div class="basket-total">
+                <h4>Basket Total (KDV included)</h4>
+                <span>0 TL</span>
+              </div>
+              <div class="cargo-total">
+                <h4>Cargo Total</h4>
+                <span>0 TL</span>
+              </div>
+              <div class="price-total">
+                <h4>Total Price</h4>
+                <span>0 TL</span>
+              </div>
+              <div class="fast-cargo">
+                <input id="cargo-checkbox1" type="checkbox" onclick="UI.fastCargo()" class="fastCargo" />Fast Cargo
+              </div>
+              <form>
+                <label for="card-number">Credit Card Number:</label>
+                <input type="text" id="card-number2" name="card-number" required />
+  
+                <label for="expiry-date">Expiration date:</label>
+                <input
+                  type="text"
+                  id="expiry-date2"
+                  name="expiry-date"
+                  placeholder="MM/YY"
+                  required
+                />
+  
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv2" name="cvv" required />
+  
+                <button type="submit">Pay</button>
+              </form>
+  
+              <button>Return</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+     <!--! PRODUCT-CASH  SİDE-BAR STOP  -->
+    <!--! SİGN İN AND SİGN UP MODAL START  -->
+    <div class="login-modal animate__animated animate__fadeIn">
+      <div  class="modal-content animate__animated animate__fadeIn">
+        <i onclick="closeModal()" id="loginclose" class="fa-solid fa-xmark"></i>
+        <div class="modal-header">Sign up</div>
+        <form id="myForm">
+          <div class="name">
+            <label for="registerName">Name:</label>
+            <input
+              id="registerName"
+              minlength="3"
+              required
+              placeholder="Please enter your name"
+              class="input-name"
+              type="text"
+            />
+          </div>
+          <div class="surname">
+            <label for="registerSurname">Surname:</label>
+            <input
+              id="registerSurname"
+              minlength="3"
+              required
+              placeholder="Please enter your surname"
+              class="input-surname"
+              type="text"
+            />
+          </div>
+          <div class="email">
+            <label for="registerEmail">E-mail:</label>
+            <input
+              id="registerEmail"
+              required
+              placeholder="Please enter your email"
+              class="input-email"
+              type="email"
+            />
+          </div>
+          <div class="password">
+            <label for="password">Password:</label>
+            <div class="showpassword">
+              <input
+                id="password"
+                required
+                placeholder="Please enter your password"
+                minlength="8"
+                class="input-password"
+                type="password"
+              /><i
+                onclick="UI.chancePasswordVisibility(event)"
+                class="fa-solid fa-eye"
+              ></i>
+            </div>
+          </div>
+          <div class="favorites">
+            <span>Favorites:</span>
+            <label for="select1"
+              ><input class="input-checkbox" id="select1" type="checkbox" /><span
+                >Telephones</span
+              ></label
+            >
+            <label for="select2"
+              ><input class="input-checkbox" id="select2" type="checkbox" /><span
+                >Tablet</span
+              ></label
+            >
+            <label for="select3"
+              ><input class="input-checkbox" id="select3" type="checkbox" /><span
+                >Watch</span
+              ></label
+            >
+            <label for="select4"
+              ><input class="input-checkbox" id="select4" type="checkbox" /><span
+                >Laptop</span
+              ></label
+            >
+            <label for="select5"
+              ><input class="input-checkbox" id="select5" type="checkbox" /><span
+                >TV</span
+              ></label
+            >
+            <label for="select6"
+              ><input class="input-checkbox" id="select6" type="checkbox" /><span
+                >Headphones</span
+              ></label
+            >
+          </div>
+
+          <div class="terms-policy">
+            <p>By using this website, you agree to the privacy terms of TechnologyShop.com operated by Technology Shop. These terms contain information about how your personal information is collected, used, protected and disclosed. Please read the privacy terms carefully and continue using this website to confirm that you understand and agree to them.</p>
+          <div class="terms-accept">
+            <input id="terms" type="checkbox">
+            <label for="terms">Agree to terms and conditions</label>
+          </div>
+          </div>
+          <div class="notifications"></div>
+          <div class="submit">
+            <p class="sign-up" onclick="UI.showSignModal(event)">
+              Do you have account?
+            </p>
+            <input  class="input-submit" type="submit" value="Register" />
+          </div>
+        </form>
+      </div>
+      <div  class="modal-content sign-in animate__animated animate__fadeIn">
+        <i onclick="closeModal()" id="loginclose" class="fa-solid fa-xmark"></i>
+        <div class="modal-header">Sign in</div>
+        <form>
+          <div class="email">
+            <label for="signInEmail">E-mail:</label>
+            <input
+              id="signInEmail"
+              placeholder="Please enter your email"
+              class="input-email"
+              type="email"
+            />
+          </div>
+          <div class="password">
+            <label for="signInPassword">Password:</label>
+            <div class="showpassword">
+              <input
+                id="signInPassword"
+                placeholder="Please enter your password"
+                minlength="8"
+                class="input-password"
+                type="password"
+              /><i
+                onclick="UI.chancePasswordVisibility(event)"
+                class="fa-solid fa-eye"
+              ></i>
+            </div>
+          </div>
+
+          <div class="notifications"></div>
+          <div class="submit">
+            <p onclick="UI.showSignModal(event);">Don't you have an account?</p>
+            <input class="input-submit" type="submit" value="Log in" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--! SİGN İN AND SİGN UP MODAL STOP  -->
+    <!--! RETURN TOP BUTTON START  -->
+    <div id="return-top" class="return-top">
+      <a href="#main"><i class="fa-solid fa-angle-up"></i></a>
+    </div>
+    <!--! RETURN TOP BUTTON STOP  -->
+    <!--! SCREEN TOP 'FOLLOW ME' NOTİFİCATİONS START   -->
+    <div
+      style="display: none"
+      class="follow-modal-wrapper animate__animated animate__fadeInDown"
+    >
+      <i onclick="closes()" id="close" class="fa-solid fa-xmark"></i>
+      <img src="./img/advertising/socialshopping.jpg" alt="" />
+      <div class="title">
+        <h2>Follow Us</h2>
+        <div class="description">
+          Follow us to be instantly informed about discounts.
+        </div>
+        <div class="social-media">
+          <span class="social-media-icon"
+            ><i class="fa-brands fa-instagram"></i
+          ></span>
+          <span class="social-media-icon"
+            ><i class="fa-brands fa-facebook"></i
+          ></span>
+          <span class="social-media-icon"
+            ><i class="fa-brands fa-youtube"></i>
+          </span>
+          <span class="social-media-icon"
+            ><i class="fa-brands fa-twitter"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!--! SCREEN TOP 'FOLLOW ME' NOTİFİCATİONS STOP   -->
+    <!--! NAVBAR START  -->
+    <header class="animate__animated animate__fadeInDown">
+      <div class="container">
+        <nav>
+          <div onclick="showHome()" class="logo">
+            <img src="./img/logo.png" alt="" />
+            <span>
+              Technology <span style="color: rgb(0, 225, 255)">Shop</span>
+            </span>
+          </div>
+          <div class="nav">
+            <a onclick="showHome()" class="nav-links active" href="#"
+              ><i class="fa-solid fa-house"></i><span>Home</span></a
+            >
+            <a onclick="showLogin()" class="nav-links" href="#"
+              ><i class="fa-solid fa-user"></i><span>My Account</span></a
+            >
+            <a onclick="showCart()" class="nav-links" href="#"
+              ><i class="fa-solid fa-cart-shopping"></i><span>My Cart</span
+              ><span class="badge">0</span></a
+            >
+            <a onclick="UI.showToggleBar()" class="toggle-bar"
+              ><i class="fa-solid fa-bars"></i
+            ></a>
+          </div>
+        </nav>
+        <div class="toggle-navbar">
+          <ul>
+            <li onclick="showHome()"><a href="#">Home</a></li>
+            <li onclick="showLogin()"><a href="#">My Account</a></li>
+            <li onclick="showCart()"><a href="#">My Cart</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!--! NAVBAR STOP  -->
+    <!--? This is a single page application. When the relevant page is clicked, the content will be changed dynamically via JavaScript without changing the page. These pages will be changed in main.  -->
+    <!--! MAİN START  -->
+    <main id="main">
+      <!--!  HOME PAGE CONTENT START -->
+      <section>
+        <div class="main animate__animated animate__fadeIn">
+          <div class="container">
+            <!--! ADVERTİSİNG SLİDER START  -->
+            <div class="slider animate__animated animate__fadeIn">
+              <i id="prev" class="fa-solid fa-chevron-left"></i>
+              <img id="slider-image" src="" alt="" />
+              <i id="next" class="fa-solid fa-chevron-right"></i>
+            </div>
+            <!--! ADVERTİSİNG SLİDER STOP  -->
+            <!--! FEATURED PRODUCTS SLİDER START  -->
+            <h2 class="slider-header">Featured devices</h2>
+            <div class="slider-container">
+              <div class="slider-wrapper"></div>
+  
+              <button class="prev-button">&#10094;</button>
+              <button class="next-button">&#10095;</button>
+            </div>
+              <!--! FEATURED PRODUCTS SLİDER STOP  -->
+              <!--! SEARCH   PRODUCTS WİTH FİLTRES TAG SECTİON START   -->
+            <div id="filtre-tag" class="filtres">
+              <div onclick="UI.filtresResult('All')"  class="filtre-badge"><i class="fa-solid fa-align-justify"></i><span>All</span></div>
+              <div onclick="UI.filtresResult('Telephones')"  class="filtre-badge"><i class="fa-solid fa-mobile-screen"></i><span>Telephones</span></div>
+              <div onclick="UI.filtresResult('Tablets')"  class="filtre-badge"><i class="fa-solid fa-tablet"></i><span>Tablets</span></div>
+              <div onclick="UI.filtresResult('Watch')"  class="filtre-badge"><i class="fa-solid fa-clock"></i><span>Watch</span></div>
+              <div onclick="UI.filtresResult('Laptops')"  class="filtre-badge"><i class="fa-solid fa-laptop"></i><span>Laptops</span></div>
+              <div onclick="UI.filtresResult('TV')"  class="filtre-badge"><i class="fa-solid fa-tv"></i><span>TV</span></div>
+              <div onclick="UI.filtresResult('Headphones')"  class="filtre-badge"><i class="fa-solid fa-headphones"></i><span>Headphones</span></div>
+            </div>
+            <h2 class="filtre-result"></h2>
+            <!--! SEARCH   PRODUCTS WİTH FİLTRES TAG SECTİON STOP   -->
+            <!--!  SEARCH PRODUCTS SECTİON START   -->
+            <div id="search">
+              <i class="fa-solid fa-search"></i
+              ><input
+                id="search-product"
+                type="text"
+                placeholder="Please enter your word"
+              />
+            </div>
+            <!--!  SEARCH PRODUCTS SECTİON STOP   -->
+            <!--!  SHOW PRODUCTS SECTİON START   -->
+            <div class="pricing"></div>
+             <!--!  SHOW PRODUCTS SECTİON STOP   -->
+          </div>
+        </div>
+      </section>
+      <!--!  HOME PAGE CONTENT STOP -->
+      <!--! MY CART PAGE CONTENT START  -->
+      <section>
+        <div class="mycart animate__animated animate__fadeIn">
+          <div class="container">
+            <h2>My Cart</h2>
+            <span onclick="UI.removeCartList()" class="remove-list"><i class="fa-solid fa-trash-can"></i> Remove All</span>
+            <div class="cart">
+              <div class="products"></div>
+              <div class="products-cash">
+                <h3>Order Summary</h3>
+                <div class="basket-total">
+                  <h4>Basket Total (KDV included)</h4>
+                  <span>0 TL</span>
+                </div>
+                <div class="cargo-total">
+                  <h4>Cargo Total</h4>
+                  <span>0 TL</span>
+                </div>
+                <div class="price-total">
+                  <h4>Total Price</h4>
+                  <span>0 TL</span>
+                </div>
+                <div class="fast-cargo"><input id="cargo-checkbox2" type="checkbox"  onclick="UI.fastCargo()" class="fastCargo">Fast Cargo</div>
+                <form>
+                  <label for="card-number">Credit Card Number:</label>
+                  <input
+                    type="text"
+                    id="card-number"
+                    name="card-number"
+                    required
+                  />
+  
+                  <label for="expiry-date">Expiration date:</label>
+                  <input
+                    type="text"
+                    id="expiry-date"
+                    name="expiry-date"
+                    placeholder="MM/YY"
+                    required
+                  />
+  
+                  <label for="cvv">CVV:</label>
+                  <input type="text" id="cvv" name="cvv" required />
+  
+                  <button type="submit">Pay</button>
+                </form>
+  
+                <button>Return</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!--! MY CART PAGE CONTENT STOP  -->
+      <!--! MY ACCOUNT PAGE CONTENT START   -->
+      <section>
+        <div class="my-account animate__animated animate__fadeIn"></div>
+      </section>
+      <!--! MY ACCOUNT PAGE CONTENT STOP   -->
+    </main>
+    <!--! MAİN START  -->
+    <!--! FOOTER START  -->
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <div class="contact">
+            <div class="contact-info">
+              <h1 id="admin-phone"></h1>
+              <h3 id="admin-mail"></h3>
+              <p>Let us know your problem using the form below. We will get back to you via e-mail as soon as possible.</p>
+            </div>
+          <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="#">
+              <input
+                type="email"
+                name="email"
+                class="text-input"
+                placeholder="Your e-mail"
+              />
+              <textarea
+                name="message"
+                class="text-input"
+                placeholder="Your message"
+              ></textarea>
+              <button type="submit" class="btn">Send</button>
+            </form>
+          </div>
+          </div>
+
+          <h3>
+            <i class="fa-solid fa-circle-down"></i> Download Our Application:
+          </h3>
+          <div class="download-links">
+            <div class="logo"><img src="./img/logo.png" alt="" /></div>
+            <a href=""
+              ><img
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
+                alt=""
+            /></a>
+            <a href=""
+              ><img
+                src="https://developer.microsoft.com/en-us/store/badges/images/English_get-it-from-MS.png"
+                alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="footer-content">
+          <div class="footer-section about">
+            <div onclick="showHome()" class="logo">
+              <img src="./img/logo.png" alt="" />
+              <span>
+                Technology <span style="color: rgb(0, 225, 255)">Shop</span>
+              </span>
+            </div>
+            <div class="social-media">
+              <span
+                style="
+                  background: #833ab4;
+                  background: linear-gradient(
+                    to right,
+                    #833ab4,
+                    #fd1d1d,
+                    #fcb045
+                  );
+                "
+                class="social-media-icon"
+                ><i class="fa-brands fa-instagram"></i
+              ></span>
+              <span style="background-color: navy" class="social-media-icon"
+                ><i class="fa-brands fa-facebook"></i
+              ></span>
+              <span
+                style="background-color: rgb(155, 24, 24)"
+                class="social-media-icon"
+                ><i class="fa-brands fa-youtube"></i>
+              </span>
+              <span
+                style="background-color: rgb(30, 159, 182)"
+                class="social-media-icon"
+                ><i class="fa-brands fa-twitter"></i>
+              </span>
+            </div>
+          </div>
+          <div class="footer-section categories">
+            <h2>Categories</h2>
+            <ul>
+              <li><a onclick="UI.filtresResult('All')"  href="#filtre-tag">All</a></li>
+              <li><a onclick="UI.filtresResult('Telephones')"  href="#filtre-tag">Telephones</a></li>
+              <li><a onclick="UI.filtresResult('Tablets')"  href="#filtre-tag">Tablets</a></li>
+              <li><a onclick="UI.filtresResult('Watch')"  href="#filtre-tag">Watch</a></li>
+              <li><a onclick="UI.filtresResult('Laptops')"  href="#filtre-tag">Laptops</a></li>
+              <li><a onclick="UI.filtresResult('TV')"  href="#filtre-tag">TV</a></li>
+              <li><a onclick="UI.filtresResult('Headphones')"  href="#filtre-tag">Headphones</a></li>
+            </ul>
+          </div>
+          <div class="footer-section links">
+            <h2>Linkler</h2>
+            <ul>
+              <li><a onclick="showHome()" href="#">Home</a></li>
+              <li><a onclick="showLogin()" href="#">My Account</a></li>
+              <li><a onclick="showCart()" href="#">My Cart</a></li>
+            </ul>
+          </div>
+        
+        
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Technology Shop. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!--! FOOTER STOP  -->
+    <!--! COOKİES START  -->
+    <div class="cookies animate__animated animate__fadeInUp">
+      <div class="logo">
+        <img src="./img/logo.png" alt="" />
+        <span>
+          Technology <span style="color: rgb(0, 225, 255)">Shop</span></span
+        >
+      </div>
+      <p>
+        Technically necessary cookies are used on our site. Some cookies are
+        also processed to provide you with a better service. For detailed
+        information, you can review the Technology Shop
+        <a href="#"> Information </a> Text.
+      </p>
+      <div class="cookies-submit">
+        <button onclick="acceptCookies()">Decline</button
+        ><button onclick="acceptCookies()">Accept</button>
+      </div>
+    </div>
+    <!--! COOKİES STOP  -->
+    </div>
+    <!--! DASHBOARD START  -->
+    <div class="dashboard">
+      <!--! DASHBOARD TOP SCREEN NAVBAR START  -->
+      <nav>
+        <div class="nav-container">
+          <div onclick="dashboard.toggleSideBar()" class="toggle-bar">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div>
+            <a onclick="dashboard.exitDashboard()" href="#"><i class="fa-solid fa-right-from-bracket"></i>Exit</a>
+          </div>
+        </div>
+      </nav>
+      <!--! DASHBOARD TOP SCREEN NAVBAR STOP  -->
+      <main>
+        <!--! DASHBOARD LEFT ASİDE BAR START (For Small  Screen Devices)  -->
+        <div class="mobile-aside">
+          <aside>
+            <div class="dashboard-logo">
+              <img src="./img/logo.png" alt="logo" />
+              <h3>Dashboard</h3>
+            </div>
+            <div class="dashboard-list-wrapper">
+              <ul class="dashboard-list">
+                <li onclick="dashboard.toggleSideBar()" class="dashboard-list-item">
+                  <a onclick="dashboard.usersDataSection()" href="#"><i class="fa-solid fa-database"></i> Users Data</a>
+                </li>
+                <li onclick="dashboard.toggleSideBar()" class="dashboard-list-item">
+                  <a onclick="dashboard.productsListSection()" href="#"><i class="fa-solid fa-mobile"></i> Product List</a>
+                </li>
+                <li onclick="dashboard.toggleSideBar()" class="dashboard-list-item">
+                  <a onclick="dashboard.userListSection()" href="#"><i class="fa-solid fa-users"></i> User List</a>
+                </li>
+                <li onclick="dashboard.toggleSideBar()" class="dashboard-list-item">
+                  <a onclick="dashboard.featuredproductsSection()" href="#"><i class="fa-solid fa-bookmark"></i> Featured Products</a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+        <!--! DASHBOARD LEFT ASİDE BAR STOP (For Small  Screen Devices)  -->
+        <!--! DASHBOARD MODAL FOR IN THE DASHBOARD CONTENT START  -->
+        <div  class="dashboard-modal ">
+          <div class="modal-content animate__animated animate__zoomIn">
+            <i onclick="dashboard.closeDashboardModal(event)" id="close-modal" class="fa-solid fa-xmark"></i>
+            <div class="remove-item-check-modal">
+              <div class="warning-icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <h3>Delete Operations</h3>
+              <p>Are you sure you want to delete?</p>
+              <div class="confirm-buttons">
+                <button onclick="dashboard.closeDashboardModal(event)">Close</button>
+                <button onclick="dashboard.dashboardOperations(event)" class="confirm-delete">Yes</button>
+              </div>
+            </div>
+            <div class="user-modal">
+              <h2 id="user-modal-header"></h2>
+              <form id="dash-user-form" >
+                <div class="field">
+                  <input minlength="3" type="text" required autocomplete="off" id="dash-user-name">
+                  <label for="dash-user-name" title="User-Name" data-title="User-Name">
+                </div>
+                <div class="field">
+                  <input minlength="3" type="text" required autocomplete="off" id="dash-user-surname">
+                  <label for="dash-user-surname" title="User-Surname" data-title="User-Surname">
+                </div>
+                <div class="field">
+                  <input type="email" required autocomplete="off" id="dash-user-mail">
+                  <label for="dash-user-mail" title="User-Email" data-title="User-Email">
+                </div>
+                <div class="field">
+                  <div class="showpassword">
+                    <input minlength="8" type="password" required autocomplete="off" id="dash-user-password">
+                    <label for="dash-user-password" title="User-Password" data-title="User-Password"></label>
+                    <i
+                    onclick="UI.chancePasswordVisibility(event)"
+                    class="fa-solid fa-eye"
+                    ></i>
+                  </div>
+                </div>
+                <div class="type-select">
+                  <select name="user-fav1" id="user-fav1-type">
+                    <option value="Telephones">Telephone</option>
+                    <option value="Tablet">Tablet</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Watch">Watch</option>
+                    <option value="TV">TV</option>
+                    <option value="Headphones">HeadPhones</option>
+                  </select>
+                  <select name="user-fav2" id="user-fav2-type">
+                    <option value="Telephones">Telephone</option>
+                    <option value="Tablet">Tablet</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Watch">Watch</option>
+                    <option value="TV">TV</option>
+                    <option value="Headphones">HeadPhones</option>
+                  </select>
+                  <select name="user-fav3" id="user-fav3-type">
+                    <option value="Telephones">Telephone</option>
+                    <option value="Tablet">Tablet</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Watch">Watch</option>
+                    <option value="TV">TV</option>
+                    <option value="Headphones">HeadPhones</option>
+                  </select>
+                </div>
+                <div class="notifications"></div>
+                <div class="confirm-buttons">
+                  <button onclick="dashboard.closeDashboardModal(event)">Close</button>
+                  <button onclick="dashboard.dashboardOperations(event)" class="confirm-add">Confirm</button>
+                </div>
+              </form>
+            </div>
+            <div class="product-modal">
+              <h2 id="product-modal-header"></h2>
+              <form id="dash-product-form" >
+                <div class="field">
+                  <input type="text" required autocomplete="off" id="product-title">
+                  <label for="product-title" title="Product-Title" data-title="Product-Title">
+                </div>
+                <div class="field">
+                  <input type="text" required autocomplete="off" id="product-features1">
+                  <label for="product-features1" title="Product-Features-1" data-title="Product-Features-1">
+                </div>
+                <div class="field">
+                  <input type="text" required autocomplete="off" id="product-features2">
+                  <label for="product-features2" title="Product-Features-2" data-title="Product-Features-2">
+                </div>
+                <div class="field">
+                  <input type="text" required autocomplete="off" id="product-features3">
+                  <label for="product-features3" title="Product-Features-3" data-title="Product-Features-3">
+                </div>
+                <div class="field">
+                  <input type="text" required autocomplete="off" id="product-features4">
+                  <label for="product-features4" title="Product-Features-4" data-title="Product-Features-4">
+                  </div>
+                <div class="field">
+                  <input minlength="3" type="number" required autocomplete="off" id="product-price" >
+                  <label for="product-price" title="Product-Price" data-title="Product-Price">
+                </div>
+                <div class="image-source-description">
+                  <p><i class="fa-solid fa-exclamation"></i> Either get the image source as a URL from a site or put it in the cardImages folder under the img folder in the project's background files with a .png extension.</p>
+                </div>
+                <div class="field">
+                  <input type="text" required autocomplete="off" id="product-image">
+                  <label for="product-image" title="Product-İmage-Source" data-title="Product-İmage-Source">
+                </div>
+                <div class="type-select">
+                  <select name="type" id="product-type">
+                    <option value="telephones">Telephone</option>
+                    <option value="tablet">Tablet</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="watch">Watch</option>
+                    <option value="TV">TV</option>
+                    <option value="headphones">HeadPhones</option>
+                  </select>
+                </div>
+                <div class="notifications"></div>
+                <div class="confirm-buttons">
+                    <button onclick="dashboard.closeDashboardModal(event)">Close</button>
+                    <button onclick="dashboard.dashboardOperations(event)" class="confirm-add">Confirm</button>
+                </div>
+              </form>
+            </div>
+            <div class="add-featured-product-modal">
+              <h2 id="featured-product-modal-header"></h2>
+              <div class="add-featured-container">                    
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--! DASHBOARD MODAL FOR IN THE DASHBOARD CONTENT STOP  -->        
+        <!--! DASHBOARD LEFT ASİDE BAR START (For Big Screen Devices) -->
+        <aside class="laptop-aside">
+          <div class="dashboard-logo">
+            <img src="./img/logo.png" alt="logo" />
+            <h3>Dashboard</h3>
+          </div>
+          <div class="dashboard-list-wrapper">
+            <ul class="dashboard-list">
+              <li class="dashboard-list-item">
+                <a onclick="dashboard.usersDataSection()" href="#"><i class="fa-solid fa-database"></i> Users Data</a>
+              </li>
+              <li class="dashboard-list-item">
+                <a onclick="dashboard.productsListSection()" href="#"><i class="fa-solid fa-mobile"></i> Product List</a>
+              </li>
+              <li class="dashboard-list-item">
+                <a onclick="dashboard.userListSection()" href="#"><i class="fa-solid fa-users"></i> User List</a>
+              </li>
+              <li class="dashboard-list-item">
+                <a onclick="dashboard.featuredproductsSection()" href="#"><i class="fa-solid fa-bookmark"></i> Featured Products</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!--! DASHBOARD LEFT ASİDE BAR STOP (For Big Screen Devices) -->
+        <!--! DASHBOARD CONTENT START -->
+        <section>
+          <!--! DASHBOARD USER DATA SECTİON START  -->
+          <article  class="dashboard-user-data">
+            <h2>Users Data</h2>
+            <div class="data-card-container">
+              <div class="data-card">
+                <span class="data-icon">
+                  <i class="fa-solid fa-users"></i>
+                </span>
+                <div class="data-title">
+                  <span id="user-number"></span>
+                  <span>Users</span>
+                </div>
+              </div>
+              <div class="data-card">
+                <span class="data-icon">
+                  <i class="fa-solid fa-mobile"></i>
+                </span>
+                <div class="data-title">
+                  <span id="product-number"></span>
+                  <span>Technology <br> Products</span>
+                </div>
+              </div>
+              <div class="data-card">
+                <span class="data-icon">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+                <div class="data-title">
+                  <span id="cart-products-number"></span>
+                  <span>Product <br> In Cart</span>
+                </div>
+              </div>
+            </div>
+          </article> 
+          <!--! DASHBOARD USER DATA SECTİON STOP  -->  
+          <!--! DASHBOARD PRODUCT LİST SECTİON START  -->
+          <article class="dashboard-product-list">
+            <h2>Product List</h2>
+            <div class="confirm-buttons">
+              <button onclick="dashboard.addProduct()"  class="confirm-add"><i class="fa-solid fa-plus"></i> Add  Product</button></td>
+            </div>
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Features 1</th>
+                  <th>Features 2</th>
+                  <th>Features 3</th>
+                  <th>Features 4</th>
+                  <th>Price</th>
+                  <th>Type</th>
+                  <th>Update</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+              <tbody id="product-container">
+              </tbody>
+            </table>
+          </article>
+          <!--! DASHBOARD PRODUCT LİST SECTİON STOP  -->
+          <!--! DASHBOARD USER LİST SECTİON START  -->
+          <article class="dashboard-user-list">
+            <h2>User List</h2>
+            <div class="confirm-buttons">
+              <button onclick="dashboard.addUser()"  class="confirm-add"><i class="fa-solid fa-plus"></i> Add  User</button></td>
+            </div>
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Mail</th>
+                  <th>Password</th>
+                  <th>User İd</th>
+                  <th>Favourites 1</th>
+                  <th>Favourites 2</th>
+                  <th>Favourites 3</th>
+                  <th>Update</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+              <tbody id="user-container">
+              </tbody>
+            </table>            
+          </article>
+          <!--! DASHBOARD USER LİST SECTİON STOP  -->
+          <!--! DASHBOARD FEATURED PRODUCT LİST SECTİON START  -->
+          <article class="dashboard-featured-product">
+            <h2>Featured Product List</h2>
+            <div class="confirm-buttons">
+              <button onclick="dashboard.addFeaturedProduct()"  class="confirm-add"><i class="fa-solid fa-plus"></i> Add Featured Product</button></td>
+            </div>
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Features 1</th>
+                  <th>Features 2</th>
+                  <th>Features 3</th>
+                  <th>Features 4</th>
+                  <th>Price</th>
+                  <th>Type</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+              <tbody id="featured-container">
+              </tbody>
+            </table>
+          </article>
+          <!--! DASHBOARD FEATURED PRODUCT LİST SECTİON STOP  -->
+        </section>
+        <!--! DASHBOARD CONTENT STOP -->
+      </main>
+    </div>
+    <!--! DASHBOARD STOP  -->
+    <!--! SCREEN RİGHT BOTTOM TOAST(NOTİFİCATİONS)  START -->
+    <div class="toast">
+      <div class="toast-loading-bar"></div>
+    </div>
+    <!--! SCREEN RİGHT BOTTOM TOAST(NOTİFİCATİONS)  STOP -->
+    <!--! JAVASCRİPT SCRİPTS START -->
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/featuredSlider.js"></script>
+    <script src="./js/advertisingSlider.js"></script>
+    <script src="./js/variables.js"></script>
+    <script src="./js/dataClass.js"></script>
+    <script src="./js/UI.js"></script>
+    <script src="./js/authentication.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/dashboard.js"></script>
+    <!--! JAVASCRİPT SCRİPTS STOP -->
+  </body>
+</html>

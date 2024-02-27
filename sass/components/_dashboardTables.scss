@@ -1,0 +1,28 @@
+.dashboard-table {
+  width: max-content;
+  background-color: #9fb6cd;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #1b397a;
+  border-style: solid;
+  color: #000000cf;
+  font-weight: 700;
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  td,
+  th {
+    border-width: 2px;
+    border-color: #1b397a;
+    border-style: solid;
+    padding: 5px;
+  }
+  button {
+    @extend dashboard-buttons;
+  }
+  thead {
+    background-color: #1b397a;
+    color: #ffffff;
+    width: 100%;
+  }
+}

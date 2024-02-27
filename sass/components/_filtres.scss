@@ -1,0 +1,21 @@
+.filtres {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+  color: #ffffff;
+  .filtre-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background-color: #35a29f;
+    border-radius: 30px;
+    transition: all 0.3s ease-in;
+    &:hover {
+      transform: scale(1.1, 1.1);
+      cursor: pointer;
+    }
+  }
+}

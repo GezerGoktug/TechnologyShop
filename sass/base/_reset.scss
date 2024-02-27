@@ -1,0 +1,41 @@
+//! Page Google Font CDN
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+//! LOGO Google Font CDN
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+* {
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+button:hover {
+  cursor: pointer;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.wrapper {
+  display: none;
+}
+//! SCROOL-BAR DESİGN START
+body {
+  scrollbar-width: thin; /* Kaydırma çubuğu kalınlığı (Firefox için) */
+  scrollbar-color: $secondaryColor, $cardColor;
+}
+/* Webkit tabanlı tarayıcılarda kaydırma çubuğu tasarımı */
+/* Chrome, Safari, Edge gibi tarayıcılarda kullanılır */
+html::-webkit-scrollbar {
+  width: 8px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: $secondaryColor; /* Kaydırma çubuğu rengi (Webkit için) */
+}
+
+html::-webkit-scrollbar-track {
+  background-color: $cardColor; /* Kaydırma çubuğu yolu rengi (Webkit için) */
+}
+//! SCROOL-BAR DESİGN STOP

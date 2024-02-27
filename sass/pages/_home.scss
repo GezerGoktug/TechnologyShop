@@ -1,0 +1,163 @@
+@import "../abstract/variables";
+@import "../abstract/mixins";
+@import "../base/reset";
+@import "../components/buttons";
+@import "../components/ınput";
+@import "../components/cards";
+@import "../components/cookies";
+@import "../components/filtres";
+@import "../components/followModal";
+@import "../components/loading";
+@import "../components/modal";
+@import "../components/sliders";
+@import "../components/toast";
+@import "../components/dashboardTables";
+@import "../components/dashboardModal";
+@import "../layout/footer";
+@import "../layout/header";
+@import "../layout/main";
+@import "../layout/navbar";
+@import "../layout/rightSidebar";
+@import "../layout/dashboardSideBar";
+//! LOGO DESİGN START
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  text-shadow: 0px 0px 23px rgba(255, 255, 255, 1);
+  &:hover {
+    text-shadow: 0px 0px 33px rgba(255, 255, 255, 1);
+  }
+  img {
+    height: 30px;
+  }
+  span {
+    font-family: "Outfit", sans-serif;
+    font-size: larger; //18px
+    font-weight: 900;
+  }
+}
+//! LOGO DESİGN STOP
+//! SCREEN LEFT SOCİAL MEDİA İCONS START
+#social-icons {
+  position: fixed;
+  top: 50%;
+  left: -50px;
+  transform: translateY(-50%);
+  z-index: 3999;
+  transition: left 0.3s ease;
+  .social-icon {
+    background: $primaryColor;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    @include flexCenter;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+  }
+}
+
+//! SCREEN LEFT SOCİAL MEDİA İCONS STOP
+//! SCREEN RİGHT  CONTACT İCONS START
+@keyframes helpAsistan {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.icon-container {
+  animation: helpAsistan 0.3s ease-in;
+  background-color: #2f39415d;
+  padding: 15px;
+  border-radius: 45px;
+  position: fixed;
+  bottom: 100px;
+  justify-content: center;
+  align-items: center;
+  right: 20px;
+  display: none;
+  height: max-content;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 300;
+  transition: all 0.3s ease;
+  color: aliceblue;
+  &:hover .icon:not(.icon:nth-child(4)) {
+    display: inline;
+  }
+  .icon {
+    display: none;
+    padding: 15px;
+    text-align: center;
+    background-color: #2a3339;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    .asistan-badge {
+      position: absolute;
+      background-color: red;
+      padding: 5px 8px;
+      border-radius: 50%;
+      top: -4px;
+      right: -5px;
+    }
+    &:nth-child(4) {
+      display: inline;
+      position: relative;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: #141617;
+    }
+  }
+}
+
+//! SCREEN RİGHT CONTACT  İCONS STOP
+//! RETURN TOP BUTTON START
+@keyframes returnTopAnimate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.return-top {
+  animation: returnTopAnimate 0.3s ease-in;
+  display: none;
+  position: fixed;
+  z-index: 120;
+  right: 30px;
+  bottom: 20px;
+  background-color: #25323a;
+  border-radius: 50%;
+  border-style: ridge;
+  width: 50px;
+  height: 50px;
+  border: 2px ridge rgb(149, 149, 149);
+  a {
+    @include flexCenter;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+    font-size: 20px;
+    color: aliceblue;
+    font-weight: 600;
+  }
+}
+//! RETURN TOP BUTTON STOP
+//!  SEARCH INPUT START
+#search {
+  @extend searchinput;
+}
+
+//!  SEARCH INPUT STOP

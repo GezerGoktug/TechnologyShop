@@ -1,0 +1,417 @@
+//! Küçük ekranlar için navbar tasarımı
+@mixin smallNav {
+  header .nav .nav-links {
+    display: none;
+  }
+  header .toggle-bar {
+    display: inline-block !important;
+  }
+}
+//! Çok Küçük ekranlar için navbar tasarımı
+@mixin xsmallNav {
+  header nav {
+    height: 60px;
+  }
+  header .toggle-navbar {
+    top: 60px;
+  }
+  //! For dashboard toggle bar in xsmall devices
+  .dashboard .nav-container {
+    justify-content: space-between !important;
+    .toggle-bar {
+      color: aliceblue;
+      display: inline !important;
+    }
+  }
+}
+//! Küçük ekranlar için kart tasarımları
+@mixin smallCards {
+  .card {
+    .card-img {
+      height: 150px;
+    }
+    .card-title ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+  .product-card {
+    width: 100%;
+    margin: 0 auto;
+    #remove {
+      opacity: 1;
+    }
+    img {
+      width: 45%;
+      padding: 30px 0;
+    }
+    .product-card-title {
+      width: 55%;
+      .product-card-list ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+  .account-card {
+    width: 100%;
+    padding: 10px;
+    font-size: 80%;
+    .account-card-img {
+      padding: 15px 15px;
+      width: 40% !important;
+    }
+    .account-card-info {
+      width: 60% !important;
+      padding: 10px;
+    }
+  }
+}
+//! Çok Küçük ekranlar için navbar tasarımı
+@mixin xsmallCards {
+  .card .card-submit {
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .product-card {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
+    .product-card-title {
+      width: 100%;
+      text-align: center;
+      .product-card-options {
+        justify-content: center;
+      }
+    }
+  }
+  .account-info .account-card {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 100%;
+    .account-card-img {
+      width: 100% !important;
+      display: block;
+    }
+    .account-card-info {
+      width: 100%;
+    }
+  }
+  .slider-card {
+    min-width: 255px;
+  }
+}
+//! Küçük ekranlar için 'bizi takip et' bildirim modalı  tasarımı
+@mixin smallFollowModal {
+  .follow-modal-wrapper {
+    flex-direction: column;
+    img {
+      width: 100%;
+    }
+    .social-media span {
+      width: 40px !important;
+      height: 40px !important;
+    }
+  }
+}
+//! Çok Küçük ekranlar için 'bizi takip et' bildirim modalı  tasarımı
+@mixin xsmallFollowModal {
+  .follow-modal-wrapper {
+    width: 80%;
+    .title {
+      font-size: 15px;
+    }
+    #close {
+      font-size: 15px;
+    }
+    img {
+      display: none;
+    }
+    .social-media {
+      gap: 10px;
+      span {
+        width: 30px !important;
+        height: 30px !important;
+      }
+    }
+  }
+}
+//! Çok Küçük ekranlar için container tasarımı
+@mixin xsmallContainer {
+  .container {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+//! Küçük ekranlar için footer tasarımı
+@mixin smallFooter {
+  .contact {
+    grid-template-columns: 100% !important;
+    gap: 30px;
+  }
+  .download-links {
+    justify-content: center !important;
+    gap: 20px;
+    .logo {
+      display: none;
+    }
+  }
+
+  .footer-section {
+    flex: 100% !important;
+  }
+  .links {
+    margin: 30px 0 !important;
+    text-align: left !important;
+    ul {
+      text-align: left !important;
+    }
+  }
+}
+//! Küçük ekranlar için cookies  tasarımı
+@mixin smallCookies {
+  .cookies {
+    width: 100%;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 80%;
+    border-radius: 0;
+  }
+}
+//! Küçük ekranlar için  login modalı  tasarımı
+@mixin smallModal {
+  .modal-content {
+    width: 90% !important;
+    max-height: 70% !important;
+    padding: 25px !important;
+    form {
+      display: flex !important;
+      gap: 10px;
+      flex-direction: column !important;
+      div {
+        width: 100% !important;
+      }
+      .submit {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+  }
+}
+//! Küçük ekranlar için sayfa içerikleri tasarımı 
+@mixin smallMainPages {
+  .pricing {
+    justify-content: center;
+  }
+  .cart {
+    .products {
+      width: 100% !important;
+    }
+
+    .products-cash {
+      display: none;
+      &.mobile {
+        display: block;
+      }
+    }
+  }
+  #side-bar {
+    display: flex;
+  }
+  .side-bar-disabled {
+    display: none !important;
+  }
+  .account {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    button {
+      width: 100%;
+      font-size: 18px;
+    }
+    .account-img {
+      width: max-content;
+    }
+
+    .account-info {
+      width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+}
+//! Çok Küçük ekranlar için sayfa içerikleri tasarımı 
+@mixin xsmallMainPages {
+  .account {
+    padding: 10px;
+    button {
+      padding: 10px 30px;
+    }
+    .account-info h2 {
+      font-size: 30px !important;
+    }
+    .account-img {
+      width: 100%;
+      background-color: transparent;
+      padding: 0;
+      img {
+        height: 200px;
+      }
+    }
+  }
+}
+//! Çok Küçük ekranlar için slider tasarımı 
+@mixin xsmallSlider {
+  .slider {
+    i {
+      font-size: 25px;
+    }
+    img {
+      height: 200px;
+    }
+  }
+}
+//! Çok Küçük ekranlar için sosyal medya ikonları tasarımı 
+@mixin smallSocialMediaİcons {
+  .social-icon {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .icon-container {
+    padding: 10px;
+    right: 10px;
+    bottom: 80px;
+    i {
+      font-size: 13px;
+    }
+  }
+  .return-top {
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
+//!  Küçük ekranlar için toast bildirimi tasarımı 
+@mixin smallToast {
+  .toast {
+    width: 100vw;
+    bottom: 0;
+    right: 0;
+  }
+}
+//! Küçük ekranlar için dashboard içerik tasarımı 
+@mixin smallDashboard {
+  .dashboard main {
+    grid-template-columns: 30% 70%;
+    article {
+      margin: 60px 5% !important ;
+    }
+    .dashboard-logo {
+      height: 75px;
+      h3 {
+        font-size: 20px;
+      }
+    }
+    .dashboard-list .dashboard-list-item a {
+      font-size: 13px !important;
+    }
+  }
+}
+//! Çok Küçük ekranlar için dashboard içerik tasarımı 
+@mixin xsmallDashboard {
+  //! Dashboard Side Bar Show Animation Start
+  @keyframes sideanimate {
+    0% {
+      transform: translate(-100%, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  //! Dashboard Side Bar Show Animation Stop
+  .dashboard main {
+    grid-template-columns: 100%;
+    position: relative;
+    .laptop-aside {
+      display: none;
+    }
+    .mobile-aside {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.527);
+      z-index: 1500;
+      aside {
+        animation: sideanimate 0.3s ease-out;
+        width: 50%;
+        height: 100%;
+      }
+    }
+  }
+}
+//! Çok Küçük ekranlar için dashboard modal  tasarımı 
+@mixin xsmallDashboardModal {
+  .type-select {
+    select {
+      width: 100% !important;
+      margin-top: 20px;
+    }
+  }
+  .add-featured-product-modal {
+    h2 {
+      margin: 60px 0 0 20px !important;
+    }
+    .add-featured-container {
+      padding: 20px 20px !important;
+      display: flex !important;
+      flex-direction: column;
+      .dash-card {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        .dash-card-title {
+          text-align: center;
+          .confirm-buttons {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 868px) {
+  @include smallCards;
+  @include smallCookies;
+  @include smallFollowModal;
+  @include smallFooter;
+  @include smallMainPages;
+  @include smallModal;
+  @include smallNav;
+  @include smallSocialMediaİcons;
+  @include smallToast;
+  @include smallDashboard;
+}
+@media (max-width: 468px) {
+  @include xsmallCards;
+  @include xsmallFollowModal;
+  @include xsmallNav;
+  @include xsmallMainPages;
+  @include xsmallSlider;
+  @include xsmallDashboard;
+  @include xsmallDashboardModal;
+  @include xsmallContainer;
+}

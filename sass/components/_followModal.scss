@@ -1,0 +1,63 @@
+@mixin backColor($number, $borderColor, $backColor) {
+  &:nth-child(#{$number}) {
+    border: 1px groove $borderColor;
+    background-color: $backColor;
+  }
+}
+.follow-modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 50vw;
+  transform: translate(50%, 0) !important;
+  padding: 20px;
+  width: 60%;
+  height: max-content;
+  background-color: #ffffffa8;
+  backdrop-filter: blur(5px);
+  align-items: start;
+  gap: 30px;
+  z-index: 500;
+  #close {
+    position: absolute;
+    color: aliceblue;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    background-color: $primaryColor;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  img {
+    width: 30%;
+    object-fit: contain;
+  }
+  .title {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 25px;
+  }
+  .social-media {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    flex-wrap: wrap;
+    span {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      @include flexCenter;
+      color: #ffffff;
+      background-color: #000000;
+      &:nth-child(1) {
+        background: #833ab4;
+        background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+        border: 1px groove pink;
+      }
+      @include backColor(2, rgb(47, 113, 167), rgb(23, 44, 165));
+      @include backColor(3, rgb(187, 69, 69), rgb(130, 19, 19));
+      @include backColor(4, rgb(84, 218, 192), rgb(19, 104, 130));
+    }
+  }
+}
