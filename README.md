@@ -33,7 +33,7 @@
 
 **<p>You can access the project live below.</p>**
 
-<a href="https://technology-shop.netlify.app">https://technology-shop.netlify.app</a>
+<a href="https://technology-shops.netlify.app">https://technology-shops.netlify.app</a>
 <br>
 <br>
 <br>
@@ -42,65 +42,77 @@
 
 ### Cart Operations
 
-https://github.com/GezerGoktug/TechnologyShop/assets/146975286/6a5069a8-de8b-42ca-8a61-6e6ff8e81f14
+
+https://github.com/GezerGoktug/TechnologyShop/assets/146975286/f764046e-1475-48cf-b64c-1606cd0a2a9a
+
+
+
 
 
 ### Search Product Operations
 
 
 
-https://github.com/GezerGoktug/TechnologyShop/assets/146975286/4d0bb14a-d1f9-4ea3-abf2-e59f8a0b2aa6
+
+https://github.com/GezerGoktug/TechnologyShop/assets/146975286/735daff2-ab58-464c-b359-1e094812eee4
+
+
+
 
 ### Dashboard Operations
 
 
 
-https://github.com/GezerGoktug/TechnologyShop/assets/146975286/55f9e47d-35e9-43e7-951c-3f08bae2da9c
+
+
+https://github.com/GezerGoktug/TechnologyShop/assets/146975286/09fb5acf-e1d6-4150-9b5a-94c4a4284972
+
+
 
 
 ### Register Validation Operations
 
 
 
-https://github.com/GezerGoktug/TechnologyShop/assets/146975286/e11f1e71-e744-4eee-b5e6-067289bc57d5
+
+
+https://github.com/GezerGoktug/TechnologyShop/assets/146975286/5b6e4270-e5e1-4892-bb9a-ca697e7bd89a
+
+
 
 
 
 
 ## Screen Photos
-![Ekran görüntüsü 2024-02-24 214406](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/55ba3a4d-aa4f-4d83-9171-c9345a316235)
 
-![Ekran görüntüsü 2024-02-24 214418](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/92e98785-30cf-4efa-916c-024de2652cb2)
+![Ekran görüntüsü 2024-02-24 214406](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/57108fb3-ce23-4502-8bd5-8d7e33c564a7)
+![Ekran görüntüsü 2024-02-24 214418](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/492fe037-d60a-453f-a14f-2661f7ba3f2c)
+![Ekran görüntüsü 2024-02-24 214429](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/5a4f969d-0b9b-45ec-9f1e-f523b25d8e04)
 
-
-![Ekran görüntüsü 2024-02-24 214429](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/6f6dfde3-8466-45da-9bf8-e92df12f5c29)
-
-
-![Ekran görüntüsü 2024-02-24 214439](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/189532f2-038e-4574-b033-5d645087d708)
+![Ekran görüntüsü 2024-02-24 214439](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/b8491384-4b72-4a2b-aec3-ec5411df3045)
+![Ekran görüntüsü 2024-02-24 214513](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/874328bf-65f3-44c0-8edf-abae9877ea2e)
 
 
-
-![Ekran görüntüsü 2024-02-24 214513](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/3698b0c2-fef2-4f73-a197-85e1fefd38fe)
-
-
-![Ekran görüntüsü 2024-02-24 214524](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/0c0f3cc6-0f31-4012-a786-e86970402bc5)
-
-![Ekran görüntüsü 2024-02-24 214536](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/ffa1accb-31eb-4439-a218-3f8ea2487f35)
-
-![Ekran görüntüsü 2024-02-24 214636](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/6bd3ca48-63e8-460b-82b4-509dee9a2ca9)
+![Ekran görüntüsü 2024-02-24 214524](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/7cf60953-f07a-49d2-878d-1aca6da692c2)
 
 
-![Ekran görüntüsü 2024-02-24 214741](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/934308f8-df98-4f64-a25b-c1f7fd539a25)
+![Ekran görüntüsü 2024-02-24 214536](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/44881fb4-3d6f-48dd-ad41-f045e65ce410)
+![Ekran görüntüsü 2024-02-24 214636](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/656dc8f6-87ac-45d6-813a-c0a4630052a7)
+
+
+![Ekran görüntüsü 2024-02-24 214741](https://github.com/GezerGoktug/TechnologyShop/assets/146975286/e8371a9d-9966-4a34-91a3-0982e3a00d49)
+
 
 
 ## Responsive View
-<img width="300" src="https://github.com/GezerGoktug/TechnologyShop/assets/146975286/6ff3ad97-b54d-4e50-9908-0bfa19df61db"/>
-<img width="300" src="https://github.com/GezerGoktug/TechnologyShop/assets/146975286/1428c034-d60e-4b04-90aa-aa3619b57379"/>
-<img width="300" src="https://github.com/GezerGoktug/TechnologyShop/assets/146975286/3f200051-a1fe-4c58-bba5-bd044b09a271"/>
-<img width="300" src="https://github.com/GezerGoktug/TechnologyShop/assets/146975286/e8e70324-64c7-487f-b5c2-ada7df8df856"/>
-<img width="300" src="https://github.com/GezerGoktug/TechnologyShop/assets/146975286/749bd526-3f3b-4401-a785-aa89f544c80c"/>
-<img width="300" src="https://github.com/GezerGoktug/TechnologyShop/assets/146975286/e0619221-d8af-4bc1-a4fb-b6278c678cc3"/>
-<img width="300" src="https://github.com/GezerGoktug/TechnologyShop/assets/146975286/aea0e088-e8d5-4011-95f4-b3d6f2595334"/>
+
+<img width="300" src="https://github.com/GezerGoktug/TechnologyShop/assets/146975286/2724dad1-308c-42a7-93ee-0b4f12bcfeb9"/>
+<img width="300" src="https://github.com/GezerGoktug/TechnologyShop/assets/146975286/883c6479-f48f-42c1-b80c-75caecac4e3b"/>
+<img width="300" src="https://github.com/GezerGoktug/TechnologyShop/assets/146975286/01cfd9bd-25ed-455d-a46b-cfcc3a0b7a6d"/>
+<img width="300" src="https://github.com/GezerGoktug/TechnologyShop/assets/146975286/6d2b9f9a-385b-4fa8-b2da-d9cd0cd9521e"/>
+<img width="300" src="https://github.com/GezerGoktug/TechnologyShop/assets/146975286/8d247c4b-f554-4cdd-b397-7d3e045fdc91"/>
+<img width="300" src="https://github.com/GezerGoktug/TechnologyShop/assets/146975286/05dc978a-78b7-491e-a570-11a0bc24439d"/>
+<img width="300" src="https://github.com/GezerGoktug/TechnologyShop/assets/146975286/a70a5757-5251-445a-b67b-fb4e5a82c313"/>
 
 
 ## SETUP
